@@ -63,5 +63,6 @@ public class QuestionsService {
     public void deleteQuestion(Long id){
         Questions question = questionsRepository.findById(id)
                 .orElseThrow(()->new QuestionNotFoundException(id));
+        questionsRepository.delete(question);
     }
 }
