@@ -52,6 +52,8 @@ public class QTypeService {
         return updatedQType;
     }
     public void deleteType(Long id){
+        QuestionTypes qtype =questionTypesRepository.findById(id)
+                .orElseThrow(()-> new QTypeNotFoundException(id));
         questionTypesRepository.deleteById(id);
     }
 }
