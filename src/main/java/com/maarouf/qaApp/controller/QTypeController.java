@@ -4,9 +4,9 @@ import com.maarouf.qaApp.model.QuestionTypes;
 import com.maarouf.qaApp.service.QTypeService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
+//import java.util.Optional;
 
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+//import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
 @RestController
 public class QTypeController {

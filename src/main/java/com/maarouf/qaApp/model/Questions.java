@@ -13,11 +13,9 @@ public class Questions {
     private Long qid;
 
     @Column(name="qtext")
-    @NonNull
     private String qtext;
 
     @Column(name = "typeid")
-    @NonNull
     private Long typeid;
 
     public Questions(String qtext, Long typeid) {
