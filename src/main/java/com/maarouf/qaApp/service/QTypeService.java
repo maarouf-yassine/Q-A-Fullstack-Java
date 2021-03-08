@@ -35,6 +35,10 @@ public class QTypeService {
         return qtype;
     }
 
+    public QuestionTypes oneByType(String typename){
+        return questionTypesRepository.findIdByType(typename);
+    }
+
     public QuestionTypes newQType(QuestionTypes newQuestionType){
         return questionTypesRepository.save(newQuestionType);
     }
