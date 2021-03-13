@@ -9,7 +9,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
 public class QuestionController {
     private final QuestionsService questionsService;
 
@@ -20,16 +19,16 @@ public class QuestionController {
         this.questionsService = questionsService;
     }
 
-    /*
+
     @GetMapping("/api/questions/page/{pagenumber}")
     Page<Questions> allPaginated(@PathVariable int  pagenumber){
         return questionsService.allPaginated(pagenumber-1,elementsPerPage);
-    }*/
-
+    }
+    /*
     @GetMapping("/api/questions/page")
     Page<Questions> allPaginated(@RequestBody PageNumberPacket pagenumber){
         return questionsService.allPaginated(pagenumber.getPagenumber()-1,elementsPerPage);
-    }
+    }*/
 
     /*
     @GetMapping("/api/questions/byType/{type}/{pagenumber}")
