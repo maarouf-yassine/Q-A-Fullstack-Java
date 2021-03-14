@@ -21,8 +21,13 @@ public class AnswersService {
         return answersRepository.findAllAnswersWithPagination(PageRequest.of(pageNumber,itemsPerPage));
     }
 
+    /*
     public Page<Answers> AnswersOfQuestion(Long qid,int pageNumber,int itemsPerPage){
         return answersRepository.getAnswersOfQuestion(PageRequest.of(pageNumber,itemsPerPage), qid);
+    }*/
+
+    public Iterable<Answers> AnswerOfQuestionByQuestionId(Long questionId){
+        return answersRepository.getAnswersOfQuestion(questionId);
     }
 
     public Iterable<Answers> all(){

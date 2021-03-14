@@ -24,11 +24,17 @@ public class AnswerController {
         return answersService.allPaginated(pageNumber.getPagenumber()-1,itemsPerPage);
     }
 
+    /*
+
     @GetMapping("api/answers/question")
     Page<Answers> answersOfQuestion(@RequestBody AnswersOfQuestionPacket packet){
         return answersService.AnswersOfQuestion(packet.getQid(), packet.getPagenumber()-1, itemsPerPage);
-    }
+    }*/
 
+    @GetMapping("api/answers/question/{qid}")
+    Iterable<Answers> answersOfOneQuestion(@PathVariable Long qid){
+        return answersService.AnswerOfQuestionByQuestionId(qid);
+    }
 
     @GetMapping("/api/answers/{id}")
     Answers one(@PathVariable Long id){

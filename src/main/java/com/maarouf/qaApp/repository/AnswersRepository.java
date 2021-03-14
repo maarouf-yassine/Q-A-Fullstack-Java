@@ -20,7 +20,7 @@ public interface AnswersRepository extends CrudRepository<Answers,Long> {
             countQuery = "SELECT COUNT(*) FROM answers",
             nativeQuery = true
     )
-    Page<Answers> getAnswersOfQuestion(Pageable pageable,Long qid);
+    Iterable<Answers> getAnswersOfQuestion(Long qid);
 
 
 }
